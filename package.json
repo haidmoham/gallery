@@ -1,0 +1,27 @@
+{
+  "name": "nakamura-gallery",
+  "version": "1.0.0",
+  "description": "A spatial Nakamura art gallery",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "thumbnails": "node scripts/make-thumbnails.mjs",
+    "prebuild": "npm run thumbnails",
+    "verify": "node scripts/verify-collection.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "sharp": "^0.35.4",
+    "vite": "^8.3.0"
+  },
+  "optionalDependencies": {
+    "@rolldown/binding-win32-x64-msvc": "^1.2.8"
+  },
+  "dependencies": {
+    "three": "^0.186.0"
+  }
+}
